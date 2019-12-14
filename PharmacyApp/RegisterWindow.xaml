@@ -1,0 +1,20 @@
+﻿<Window x:Class="PharmacyApp.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyApp"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="registerHeader" HorizontalAlignment="Left" Margin="323,35,0,0" Text="Kayıt Ol" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="307,128,0,0" Text="İsminizi Giriniz" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" Height="40" FontSize="16"/>
+        <TextBlock x:Name="nameLabel" HorizontalAlignment="Left" Margin="148,128,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
+        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="148,0,0,0" Text="Şifre" TextWrapping="Wrap" VerticalAlignment="Center" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
+        <TextBlock x:Name="registerHeader_Copy2" HorizontalAlignment="Left" Margin="148,269,0,0" Text="Şifre (tekrar)" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="307,0,0,0" VerticalAlignment="Center" Width="277" Height="40" PasswordChar="*" />
+        <PasswordBox x:Name="passwordAgainTextBox" HorizontalAlignment="Left" Margin="307,269,0,0" VerticalAlignment="Top" Width="277" Height="40" PasswordChar="*" />
+        <Button x:Name="registerSubmitButton" Content="Kayıt Ol" HorizontalAlignment="Center" Margin="0,359,0,0" VerticalAlignment="Top" Height="40" Width="159" Background="#FF63289E" Foreground="White" Click="registerSubmitButton_Click"/>
+
+    </Grid>
+</Window>

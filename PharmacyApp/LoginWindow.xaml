@@ -1,0 +1,18 @@
+﻿<Window x:Class="PharmacyApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyApp"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="330" Width="538">
+    <Grid>
+        <TextBlock x:Name="loginHeader" HorizontalAlignment="Center" Margin="0,27,0,0" Text="Giriş Yap" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
+        <TextBlock x:Name="usernameLabel" HorizontalAlignment="Left" Margin="89,102,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
+        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="130,157,0,0" Text="Şifre" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="286,102,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="23"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="286,157,0,0" VerticalAlignment="Top" Width="153" Height="23"/>
+        <Button x:Name="loginButton" Content="Giriş Yap" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="30" Width="106" FontSize="16" Click="loginButton_Click"/>
+
+    </Grid>
+</Window>
