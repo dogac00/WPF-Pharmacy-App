@@ -38,7 +38,16 @@ namespace PharmacyApp
 
         private void ShowDetailsClick(object sender, RoutedEventArgs e)
         {
+            var current = this.drugsTable.SelectedItem as GridDrug;
 
+            var userDrug = _user
+                .Pharmacy
+                .Drugs
+                .First(drug => drug.Name == current.Name);
+
+            DrugDetailWindow window = new DrugDetailWindow(userDrug);
+
+            window.ShowDialog();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

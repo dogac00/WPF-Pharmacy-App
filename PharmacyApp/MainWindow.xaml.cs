@@ -36,10 +36,17 @@ namespace PharmacyApp
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             DrugsWindow window = new DrugsWindow(_user);
 
             window.Show();
+        }
+
+        private void addDrugButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddDrugWindow window = new AddDrugWindow(_user);
+
+            window.ShowDialog();
         }
     }
 }

@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddDrugWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DrugDetailWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="DrugsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +27,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddDrugWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DrugDetailWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="DrugsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

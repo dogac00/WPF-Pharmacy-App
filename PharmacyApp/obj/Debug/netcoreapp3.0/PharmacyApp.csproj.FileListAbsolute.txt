@@ -112,3 +112,7 @@ C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp
 C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\PharmacyApp.pdb
 C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\DrugsWindow.g.cs
 C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\DrugsWindow.baml
+C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\DrugDetailWindow.g.cs
+C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\DrugDetailWindow.baml
+C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\AddDrugWindow.g.cs
+C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\obj\Debug\netcoreapp3.0\AddDrugWindow.baml

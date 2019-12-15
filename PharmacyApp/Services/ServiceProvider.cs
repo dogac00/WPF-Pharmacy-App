@@ -7,11 +7,17 @@ namespace PharmacyApp
 {
     static class ServiceProvider
     {
-        private static readonly UserService Service = new UserService();
+        private static readonly UserService UserService = new UserService();
+        private static readonly DrugService DrugService = new DrugService();
 
         public static UserService GetUserService()
         {
-            return Service;
+            return UserService;
+        }
+
+        public static DrugService GetDrugService()
+        {
+            return DrugService;
         }
     }
 }

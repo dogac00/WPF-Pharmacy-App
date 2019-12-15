@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0
 C:\Users\asus\Documents\GitHub\WPF-Pharmacy-App\PharmacyApp\App.xaml
-5-1462615235
+7217680309
 
-24-2057584364
+29-803436383
 210-1529383929
-DrugsWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegisterWindow.xaml;WelcomeWindow.xaml;
+AddDrugWindow.xaml;DrugDetailWindow.xaml;DrugsWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegisterWindow.xaml;WelcomeWindow.xaml;
 
 False
 
