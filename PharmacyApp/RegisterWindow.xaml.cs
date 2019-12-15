@@ -22,13 +22,15 @@ namespace PharmacyApp
     {
         private PasswordService _passwordService;
         private UserService _userService;
+        private Window _windowToClose;
 
-        public RegisterWindow()
+        public RegisterWindow(Window window)
         {
             InitializeComponent();
 
             _passwordService = new PasswordService();
-            _userService = new UserService();
+            _userService = ServiceProvider.GetUserService();
+            _windowToClose = window;
         }
 
         private async void registerSubmitButton_Click(object sender, RoutedEventArgs e)
@@ -72,7 +74,12 @@ namespace PharmacyApp
 
             MessageBox.Show("Kayıt Başarılı.");
 
+            MainWindow window = new MainWindow(user);
+
+            window.Show();
+
             this.Close();
+            _windowToClose.Close();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace PharmacyApp.Data
 {
     public class Vitamin : Product
     {
-        public List<string> Benefits { get; set; }
+        public List<Benefit> Benefits { get; set; }
 
         public Vitamin(string name, decimal price) : base(name, price)
         {
@@ -14,7 +14,22 @@ namespace PharmacyApp.Data
 
         public void AddBenefit(string benefit)
         {
-            this.Benefits.Add(benefit);
+            this.Benefits.Add(new Benefit(benefit));
+        }
+    }
+
+    public class Benefit
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public Benefit() : this("")
+        {
+        }
+
+        public Benefit(string name)
+        {
+            this.Name = name;
         }
     }
 }

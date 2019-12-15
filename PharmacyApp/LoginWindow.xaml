@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyApp"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="330" Width="538">
+        Title="LoginWindow" Height="305" Width="467">
     <Grid>
-        <TextBlock x:Name="loginHeader" HorizontalAlignment="Center" Margin="0,27,0,0" Text="Giriş Yap" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
-        <TextBlock x:Name="usernameLabel" HorizontalAlignment="Left" Margin="89,102,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
-        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="130,157,0,0" Text="Şifre" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
-        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="286,102,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="23"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="286,157,0,0" VerticalAlignment="Top" Width="153" Height="23"/>
-        <Button x:Name="loginButton" Content="Giriş Yap" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Height="30" Width="106" FontSize="16" Click="loginButton_Click"/>
+        <TextBlock x:Name="loginHeader" HorizontalAlignment="Center" Margin="0,33,0,0" Text="Giriş Yap" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
+        <TextBlock x:Name="usernameLabel" HorizontalAlignment="Left" Margin="89,86,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
+        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="130,141,0,0" Text="Şifre" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Articulate Extrabold" FontSize="20"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="274,86,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="30"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="274,141,0,0" VerticalAlignment="Top" Width="153" Height="30"/>
+        <Button x:Name="loginButton" Content="Giriş Yap" HorizontalAlignment="Left" Margin="187,225,0,0" VerticalAlignment="Top" Height="30" Width="106" FontSize="16" Click="loginButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="165,185,0,0" Text="Giriş Yapmak için Enter'a Bas" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

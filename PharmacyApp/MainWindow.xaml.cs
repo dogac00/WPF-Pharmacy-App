@@ -30,6 +30,16 @@ namespace PharmacyApp
             _user = user;
         }
 
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.helloLabel.Text = string.Concat("Hello, " , _user.UserName);
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DrugsWindow window = new DrugsWindow(_user);
+
+            window.Show();
+        }
     }
 }

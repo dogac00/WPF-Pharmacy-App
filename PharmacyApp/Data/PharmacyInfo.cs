@@ -6,6 +6,7 @@ namespace PharmacyApp.Data
 {
     public class PharmacyInfo
     {
+        public int Id { get; set; }
         public List<Drug> Drugs { get; set; }
         public List<Vitamin> Vitamins { get; set; }
         public List<Product> OtherProducts { get; set; }

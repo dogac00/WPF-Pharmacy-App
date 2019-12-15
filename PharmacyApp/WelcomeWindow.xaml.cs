@@ -24,12 +24,14 @@ namespace PharmacyApp
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
+            LoginWindow window = new LoginWindow(this);
 
+            window.ShowDialog();
         }
 
         private void userNameTextBox_Click(object sender, RoutedEventArgs e)
         {
-            RegisterWindow window = new RegisterWindow();
+            RegisterWindow window = new RegisterWindow(this);
 
             window.ShowDialog();
         }

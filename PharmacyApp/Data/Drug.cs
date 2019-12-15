@@ -10,6 +10,15 @@ namespace PharmacyApp.Data
         public List<AdverseEffect> AdverseEffects { get; set; }
         public List<Drug> Interactions { get; set; }
         public DrugFirm Firm { get; set; }
+        public Ingredient Ingredient { get; set; }
+
+        public Drug() : base("", 0)
+        {
+            this.RelievedSymptoms = new List<Symptom>();
+            this.AdverseEffects = new List<AdverseEffect>();
+            this.Interactions = new List<Drug>();
+            this.Firm = new DrugFirm("");
+        }
 
         public Drug(string name, string firm, decimal price) : base(name, price)
         {
@@ -19,29 +28,21 @@ namespace PharmacyApp.Data
             this.Firm = new DrugFirm(firm);
         }
 
-        public void AddSymptomRelief(Symptom symptom)
+        public GridDrug ToGridDrug()
         {
-            this.RelievedSymptoms.Add(symptom);
+            return new GridDrug
+            {
+                Name = this.Name,
+                Firm = this.Firm.Name,
+                Ingredient = this.Ingredient.Name
+            };
         }
+    }
 
-        public void AddSymptomRelief(string symptom)
-        {
-            this.RelievedSymptoms.Add(new Symptom(symptom));
-        }
-
-        public void AddAdverseEffect(AdverseEffect effect)
-        {
-            this.AdverseEffects.Add(effect);
-        }
-
-        public void AddAdverseEffect(string effect)
-        {
-            this.AdverseEffects.Add(new AdverseEffect(effect));
-        }
-
-        public void AddInteraction(Drug drug)
-        {
-            this.Interactions.Add(drug);
-        }
+    public class GridDrug
+    {
+        public string Name { get; set; }
+        public string Firm { get; set; }
+        public string Ingredient { get; set; }
     }
 }

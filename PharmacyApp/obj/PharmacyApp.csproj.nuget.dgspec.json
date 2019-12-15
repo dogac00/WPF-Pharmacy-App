@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\source\\repos\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj": {}
+    "C:\\Users\\asus\\Documents\\GitHub\\WPF-Pharmacy-App\\PharmacyApp\\PharmacyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\source\\repos\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj": {
+    "C:\\Users\\asus\\Documents\\GitHub\\WPF-Pharmacy-App\\PharmacyApp\\PharmacyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\source\\repos\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Documents\\GitHub\\WPF-Pharmacy-App\\PharmacyApp\\PharmacyApp.csproj",
         "projectName": "PharmacyApp",
-        "projectPath": "C:\\Users\\asus\\source\\repos\\PharmacyApp\\PharmacyApp\\PharmacyApp.csproj",
+        "projectPath": "C:\\Users\\asus\\Documents\\GitHub\\WPF-Pharmacy-App\\PharmacyApp\\PharmacyApp.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\source\\repos\\PharmacyApp\\PharmacyApp\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Documents\\GitHub\\WPF-Pharmacy-App\\PharmacyApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,12 @@
         "netcoreapp3.0": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
             },

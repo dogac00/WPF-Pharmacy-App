@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="342" Width="622">
+    <Grid Loaded="Grid_Loaded">
+        <TextBlock x:Name="helloLabel" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Hello" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontFamily="Microsoft Sans Serif" Foreground="#FF47226C"/>
+        <Button Content="İlaçları Gör" HorizontalAlignment="Left" Margin="86,60,0,0" VerticalAlignment="Top" Height="32" Width="124" Background="#FFAB17E2" Click="Button_Click"/>
 
     </Grid>
 </Window>

@@ -20,13 +20,16 @@ namespace PharmacyApp
     {
         private PasswordService _service;
         private UserService _userService;
+        private Window _windowToClose;
 
-        public LoginWindow()
+        public LoginWindow(Window window)
         {
             InitializeComponent();
 
             _service = new PasswordService();
             _userService = ServiceProvider.GetUserService();
+            _windowToClose = window;
+            loginButton.IsDefault = true;
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -52,7 +55,12 @@ namespace PharmacyApp
                 return;
             }
 
+            MainWindow window = new MainWindow(user);
 
+            window.Show();
+
+            this.Close();
+            _windowToClose.Close();
         }
     }
 }

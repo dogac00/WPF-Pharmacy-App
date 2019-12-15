@@ -11,11 +11,21 @@ namespace PharmacyApp.Data
         public string Password { get; set; }
         public PharmacyInfo Pharmacy { get; set; }
 
+        public PharmacyUser() : this("", "")
+        {
+            
+        }
+
         public PharmacyUser(string username, string hashedPassword)
         {
             this.UserName = username;
             this.Password = hashedPassword;
             this.Pharmacy = new PharmacyInfo();
+        }
+
+        public override string ToString()
+        {
+            return this.UserName;
         }
     }
 }
