@@ -32,19 +32,33 @@ namespace PharmacyApp
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            this.helloLabel.Text = string.Concat("Hello, " , _user.UserName);
+            this.helloLabel.Text = string.Concat("Merhaba, " , _user.UserName);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         { 
-            DrugsWindow window = new DrugsWindow(_user);
+            DrugWindow window = new DrugWindow(_user);
 
-            window.Show();
+            window.ShowDialog();
         }
 
-        private void addDrugButton_Click(object sender, RoutedEventArgs e)
+        private void adverseEffectsButton_Click(object sender, RoutedEventArgs e)
+        {
+            AdverseEffectWindow window = new AdverseEffectWindow(_user);
+
+            window.ShowDialog();
+        }
+
+        private void AddDrugButtonClick(object sender, RoutedEventArgs e)
         {
             AddDrugWindow window = new AddDrugWindow(_user);
+
+            window.ShowDialog();
+        }
+
+        private void SearchButtonClick(object sender, RoutedEventArgs e)
+        {
+            SearchDrugWindow window = new SearchDrugWindow(_user);
 
             window.ShowDialog();
         }

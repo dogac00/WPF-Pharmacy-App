@@ -10,16 +10,22 @@
     <Compile Update="AddDrugWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="DrugDetailWindow.xaml.cs">
+    <Compile Update="AdverseEffectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="DrugsWindow.xaml.cs">
+    <Compile Update="DrugDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DrugWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RegisterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SearchDrugWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WelcomeWindow.xaml.cs">
@@ -30,10 +36,13 @@
     <Page Update="AddDrugWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="DrugDetailWindow.xaml">
+    <Page Update="AdverseEffectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="DrugsWindow.xaml">
+    <Page Update="DrugDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DrugWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoginWindow.xaml">
@@ -43,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SearchDrugWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WelcomeWindow.xaml">

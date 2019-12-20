@@ -30,5 +30,32 @@ namespace PharmacyApp.Extensions
                 }
             );
         }
+
+        public static void HideColumn(this DataGrid dataGrid, string colunmHeader)
+        {
+            var col = GetColumn(dataGrid, colunmHeader);
+
+            col.Visibility = Visibility.Collapsed;
+        }
+
+        public static void RenameColumn(this DataGrid dataGrid, string initialHeader, string newHeader)
+        {
+            var col = GetColumn(dataGrid, initialHeader);
+
+            col.Header = newHeader;
+        }
+
+        public static DataGridColumn GetColumn(this DataGrid dataGrid, string columnName)
+        {
+            foreach (DataGridColumn column in dataGrid.Columns)
+            {
+                string header = column.Header as string;
+
+                if (header == columnName)
+                    return column;
+            }
+
+            return null;
+        }
     }
 }

@@ -1,0 +1,22 @@
+﻿<Window x:Class="PharmacyApp.DrugDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyApp"
+        mc:Ignorable="d"
+        Title="DrugDetailsWindow" Height="346" Width="478" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="İlaç Detayı" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="96,62,0,0" Text="İsim" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="96,104,0,0" Text="Semptom" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="96,150,0,0" Text="Yan Etki" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="96,196,0,0" Text="Etken Madde" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="300,62,0,0" Text="İlaç Detayı" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock x:Name="txtSymptom" HorizontalAlignment="Left" Margin="300,104,0,0" Text="İlaç Detayı" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock x:Name="txtAdverseEffect" HorizontalAlignment="Left" Margin="300,152,0,0" Text="İlaç Detayı" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <TextBlock x:Name="txtIngredient" HorizontalAlignment="Left" Margin="300,200,0,0" Text="İlaç Detayı" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="Kapat" HorizontalAlignment="Left" Margin="193,257,0,0" VerticalAlignment="Top" Height="28" Width="110" FontSize="20" FontFamily="Microsoft Sans Serif" Background="#FF8722CD" Foreground="White" Click="Button_Click"/>
+
+    </Grid>
+</Window>

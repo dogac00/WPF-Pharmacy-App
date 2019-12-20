@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,17 +10,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PharmacyApp.Data;
+using PharmacyApp.Services;
 
 namespace PharmacyApp
 {
     /// <summary>
-    /// Interaction logic for DrugDetailWindow.xaml
+    /// Interaction logic for DrugDetailsWindow.xaml
     /// </summary>
-    public partial class DrugDetailWindow : Window
+    public partial class DrugDetailsWindow : Window
     {
-        private Drug _drug;
-
-        public DrugDetailWindow(Drug drug)
+        private readonly Drug _drug;
+        
+        public DrugDetailsWindow(Drug drug)
         {
             InitializeComponent();
 
@@ -30,11 +30,15 @@ namespace PharmacyApp
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.symptomsList.ItemsSource = _drug.RelievedSymptoms.ToList();
-            this.adverseEffectsList.ItemsSource = _drug.AdverseEffects.ToList();
-            this.interactionsList.ItemsSource = _drug.Interactions.ToList();
-            this.firmText.Text = _drug.Firm.Name;
-            this.ingredientText.Text = _drug.Ingredient.Name;
+            txtName.Text = _drug.Name;
+            txtAdverseEffect.Text = _drug.AdverseEffect;
+            txtIngredient.Text = _drug.Ingredient;
+            txtSymptom.Text = _drug.RelievedSymptom;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

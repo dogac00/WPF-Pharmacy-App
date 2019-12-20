@@ -1,0 +1,19 @@
+﻿<Window x:Class="PharmacyApp.SearchDrugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyApp"
+        mc:Ignorable="d"
+        Title="SearchDrugWindow" Height="354" Width="619" Loaded="Window_Loaded">
+    <Grid>
+        <ComboBox x:Name="drugPropertiesBox" HorizontalAlignment="Left" Margin="333,117,0,0" VerticalAlignment="Top" Width="236" Height="29" FontSize="24" FontFamily="Microsoft Sans Serif"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,32,0,0" Text="İlaç Ara" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Microsoft Sans Serif" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,119,0,0" Text="Neye Göre Aranmalı?" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Microsoft Sans Serif" FontSize="24"/>
+        <TextBox x:Name="txtSearchBox" HorizontalAlignment="Left" Margin="333,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="30" FontFamily="Microsoft Sans Serif" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,192,0,0" Text="Aranacak Anahtar Sözcük" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Microsoft Sans Serif" FontSize="24"/>
+        <Button x:Name="btnSearch" Content="Ara" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top" Height="30" Width="145" Background="#FFC01AD1" FontSize="20" FontFamily="Microsoft Sans Serif" Foreground="White" Click="btnSearch_Click"/>
+        <Button x:Name="btnClose" Content="Kapat" HorizontalAlignment="Left" Margin="478,278,0,0" VerticalAlignment="Top" Height="30" Width="118" Background="#FFC01AD1" FontSize="20" FontFamily="Microsoft Sans Serif" Foreground="White" Click="btnClose_Click"/>
+
+    </Grid>
+</Window>

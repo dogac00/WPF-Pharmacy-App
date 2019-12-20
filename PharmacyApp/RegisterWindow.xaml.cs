@@ -68,7 +68,7 @@ namespace PharmacyApp
         {
             string hashedPassword = _passwordService.HashPassword(password);
 
-            PharmacyUser user = new PharmacyUser(username, hashedPassword);
+            PharmacyUser user = new PharmacyUser { UserName = username, Password = hashedPassword };
 
             await _userService.AddUser(user);
 

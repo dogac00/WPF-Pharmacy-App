@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="342" Width="622">
+        Title="MainWindow" Height="268" Width="463">
     <Grid Loaded="Grid_Loaded">
-        <TextBlock x:Name="helloLabel" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Hello" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontFamily="Microsoft Sans Serif" Foreground="#FF47226C"/>
-        <Button Content="İlaçları Gör" HorizontalAlignment="Left" Margin="28,56,0,0" VerticalAlignment="Top" Height="32" Width="124" Background="#FFAB17E2" Click="Button_Click"/>
-        <Button x:Name="addDrugButton" Content="İlaç Ekle" HorizontalAlignment="Left" Margin="187,56,0,0" VerticalAlignment="Top" Height="32" Width="124" Background="#FFAB17E2" Click="addDrugButton_Click"/>
+        <TextBlock x:Name="helloLabel" HorizontalAlignment="Left" Margin="195,10,0,0" Text="Hello" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontFamily="Microsoft Sans Serif" Foreground="#FF47226C"/>
+        <Button Content="İlaçları Gör" HorizontalAlignment="Left" Margin="88,94,0,0" VerticalAlignment="Top" Height="32" Width="124" Background="#FFAB17E2" Click="Button_Click"/>
+        <Button x:Name="adverseEffectsButton" Content="İlaç Ekle" HorizontalAlignment="Left" Margin="264,94,0,0" VerticalAlignment="Top" Height="32" Width="124" Background="#FFAB17E2" Click="AddDrugButtonClick"/>
+        <Button Content="İlaç Ara" HorizontalAlignment="Left" Margin="177,186,0,0" VerticalAlignment="Top" Height="32" Width="124" Background="#FFAB17E2" Click="SearchButtonClick"/>
 
     </Grid>
 </Window>

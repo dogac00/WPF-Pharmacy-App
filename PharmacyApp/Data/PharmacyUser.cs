@@ -9,19 +9,8 @@ namespace PharmacyApp.Data
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public PharmacyInfo Pharmacy { get; set; }
 
-        public PharmacyUser() : this("", "")
-        {
-            
-        }
-
-        public PharmacyUser(string username, string hashedPassword)
-        {
-            this.UserName = username;
-            this.Password = hashedPassword;
-            this.Pharmacy = new PharmacyInfo();
-        }
+        public ICollection<Drug> Drugs { get; set; } = new List<Drug>();
 
         public override string ToString()
         {

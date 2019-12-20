@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyApp"
         mc:Ignorable="d"
-        Title="WelcomeWindow" Height="332" Width="588">
+        Title="WelcomeWindow" Height="295" Width="431">
     <Grid>
         <TextBlock x:Name="welcomeHeader" HorizontalAlignment="Center" Margin="0,29,0,0" Text="Eczane Uygulamasına Hosgeldiniz" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="312" FontSize="20"/>
-        <Button x:Name="userNameTextBox" Content="Kayıt Ol" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top" Height="40" Width="140" FontSize="20" Click="userNameTextBox_Click"/>
-        <Button x:Name="loginButton" Content="Giriş Yap" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Height="40" Width="140" FontSize="20" Click="loginButton_Click"/>
+        <Button x:Name="userNameTextBox" Content="Kayıt Ol" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top" Height="40" Width="140" FontSize="20" Click="userNameTextBox_Click" Background="#FF8420BD" Foreground="White"/>
+        <Button x:Name="loginButton" Content="Giriş Yap" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Height="40" Width="140" FontSize="20" Click="loginButton_Click" Foreground="White" Background="#FF8420BD"/>
 
     </Grid>
 </Window>
