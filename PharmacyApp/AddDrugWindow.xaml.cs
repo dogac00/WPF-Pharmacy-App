@@ -30,7 +30,7 @@ namespace PharmacyApp
             _service = ServiceProvider.GetDrugService();
         }
 
-        private void AddButtonClick(object sender, RoutedEventArgs e)
+        private async void AddButtonClick(object sender, RoutedEventArgs e)
         {
             string name = txtName.Text;
             string ingredient = txtIngredient.Text;
@@ -47,7 +47,7 @@ namespace PharmacyApp
                 User = _user
             };
 
-            _service.AddDrug(_user, drug);
+            await _service.AddDrugAsync(_user, drug);
 
             MessageBox.Show("İlaç başarıyla eklendi.");
 

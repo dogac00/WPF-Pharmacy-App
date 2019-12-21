@@ -59,7 +59,7 @@ namespace PharmacyApp
                 return;
             }
 
-            if (await _userService.IsUsernameTaken(username))
+            if (await _userService.IsUsernameTakenAsync(username))
             {
                 MessageBox.Show("Kullanici adı alınmış. Farklı bir kullanıcı adı deneyin.");
 

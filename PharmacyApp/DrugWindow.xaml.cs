@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -34,17 +35,17 @@ namespace PharmacyApp
             this.drugsGrid.CanUserAddRows = false;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.drugsGrid.AddButtonColumn("Detay Gör", ShowDetailsButton);
             this.drugsGrid.AddButtonColumn("Sil", DeleteDrugButton);
 
-            UpdateDrugsGrid();
+            await UpdateDrugsGrid();
         }
 
-        private void UpdateDrugsGrid()
+        private async Task UpdateDrugsGrid()
         {
-            var drugs = _drugService.GetAllDrugs(_user);
+            var drugs = await _drugService.GetAllDrugsAsync(_user);
             
             this.drugsGrid.ItemsSource = drugs;
             this.drugsGrid.HideColumn("Id");
@@ -56,15 +57,15 @@ namespace PharmacyApp
             this.drugsGrid.RenameColumn("Name", "İsim");
         }
 
-        private void DeleteDrugButton(object sender, RoutedEventArgs e)
+        private async void DeleteDrugButton(object sender, RoutedEventArgs e)
         {
             var drug = this.drugsGrid.SelectedItem as Drug;
 
-            _drugService.DeleteDrug(_user, drug);
+            await _drugService.DeleteDrugAsync(_user, drug);
 
             MessageBox.Show("İlaç silindi.");
 
-            UpdateDrugsGrid();
+            await UpdateDrugsGrid();
         }
 
         private void ShowDetailsButton(object sender, RoutedEventArgs e)

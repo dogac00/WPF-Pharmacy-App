@@ -76,10 +76,11 @@ namespace PharmacyApp
                 return;
             }
 
-            string drugDetails = $"İlaç Adı\t\t{ drug.Name }\r\n" +
-                                 $"İlaç Etken Madde\t{ drug.Ingredient }\r\n" +
-                                 $"İlaç Semptom\t{ drug.RelievedSymptom }\r\n" +
-                                 $"İlaç Yan Etki\t{ drug.AdverseEffect }\r\n";
+            string drugDetails = $"\t\tİlaç Bulundu\t\r\n" + 
+                                 $"\tİlaç Adı\t\t{drug.Name}\t\r\n" +
+                                 $"\tİlaç Etken Madde\t{drug.Ingredient}\t\r\n" +
+                                 $"\tİlaç Semptom\t{drug.RelievedSymptom}\t\r\n" +
+                                 $"\tİlaç Yan Etki\t{drug.AdverseEffect}\t\r\n";
 
             MessageBox.Show(drugDetails);
         }

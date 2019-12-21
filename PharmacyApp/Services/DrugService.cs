@@ -18,34 +18,35 @@ namespace PharmacyApp.Services
             _context = new AppDbContext();
         }
         
-        public void DeleteDrug(PharmacyUser user, Drug drug)
+        public async Task DeleteDrugAsync(PharmacyUser user, Drug drug)
         {
             user.Drugs.Remove(drug);
             _context.Drugs.Remove(drug);
             _context.Users.Update(user);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void AddDrug(PharmacyUser user, Drug drug)
+        public async Task AddDrugAsync(PharmacyUser user, Drug drug)
         {
             user.Drugs.Add(drug);
-            _context.Drugs.Add(drug);
+            await _context.Drugs.AddAsync(drug);
             _context.Users.Update(user);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<Drug> GetAllDrugs(PharmacyUser user)
+        public async Task<List<Drug>> GetAllDrugsAsync(PharmacyUser user)
         {
-            return _context
+            return await _context
                 .Drugs
                 .Where(d => d.User.Id == user.Id)
-                .ToList();
+                .ToListAsync();
         }
 
         public Drug FindDrug(PharmacyUser user, Func<Drug, bool> howToSearch)
         {
             return _context.Drugs
                 .Where(d => d.UserId == user.Id)
+                .AsEnumerable()
                 .Where(howToSearch)
                 .FirstOrDefault();
         }

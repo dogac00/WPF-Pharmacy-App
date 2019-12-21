@@ -23,7 +23,7 @@ namespace PharmacyApp.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> IsUsernameTaken(string username)
+        public async Task<bool> IsUsernameTakenAsync(string username)
         {
             return await _context
                 .Users
