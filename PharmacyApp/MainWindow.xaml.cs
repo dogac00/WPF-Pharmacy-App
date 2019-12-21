@@ -62,5 +62,14 @@ namespace PharmacyApp
 
             window.ShowDialog();
         }
+
+        private void LogoutClick(object sender, RoutedEventArgs e)
+        {
+            WelcomeWindow window = new WelcomeWindow();
+
+            window.Show();
+
+            this.Close();
+        }
     }
 }

@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyApp"
         mc:Ignorable="d"
-        Title="RegisterWindow" Height="450" Width="800">
+        Title="RegisterWindow" Height="447" Width="640">
     <Grid>
-        <TextBlock x:Name="registerHeader" HorizontalAlignment="Left" Margin="323,35,0,0" Text="Kayıt Ol" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
-        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="307,128,0,0" Text="İsminizi Giriniz" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" Height="40" FontSize="16"/>
-        <TextBlock x:Name="nameLabel" HorizontalAlignment="Left" Margin="148,128,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
-        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="148,0,0,0" Text="Şifre" TextWrapping="Wrap" VerticalAlignment="Center" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
-        <TextBlock x:Name="registerHeader_Copy2" HorizontalAlignment="Left" Margin="148,269,0,0" Text="Şifre (tekrar)" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Malgun Gothic" FontSize="24"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="307,0,0,0" VerticalAlignment="Center" Width="277" Height="40" PasswordChar="*" />
-        <PasswordBox x:Name="passwordAgainTextBox" HorizontalAlignment="Left" Margin="307,269,0,0" VerticalAlignment="Top" Width="277" Height="40" PasswordChar="*" />
-        <Button x:Name="registerSubmitButton" Content="Kayıt Ol" HorizontalAlignment="Center" Margin="0,359,0,0" VerticalAlignment="Top" Height="40" Width="159" Background="#FF63289E" Foreground="White" Click="registerSubmitButton_Click"/>
+        <TextBlock x:Name="registerHeader" HorizontalAlignment="Left" Margin="267,48,0,0" Text="Kayıt Ol" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Microsoft Sans Serif" FontSize="24"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="264,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" Height="40" FontSize="20" FontFamily="Microsoft Sans Serif"/>
+        <TextBlock x:Name="nameLabel" HorizontalAlignment="Left" Margin="114,131,0,0" Text="Kullanıcı Adı" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Microsoft Sans Serif" FontSize="20"/>
+        <TextBlock x:Name="passwordLabel" HorizontalAlignment="Left" Margin="117,202,0,0" Text="Şifre" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Microsoft Sans Serif" FontSize="20"/>
+        <TextBlock x:Name="registerHeader_Copy2" HorizontalAlignment="Left" Margin="117,272,0,0" Text="Şifre (tekrar)" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="186" FontFamily="Microsoft Sans Serif" FontSize="20"/>
+        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="264,193,0,0" VerticalAlignment="Top" Width="277" Height="40" PasswordChar="*" FontFamily="Microsoft Sans Serif" FontSize="20" />
+        <PasswordBox x:Name="passwordAgainTextBox" HorizontalAlignment="Left" Margin="264,266,0,0" VerticalAlignment="Top" Width="277" Height="40" PasswordChar="*" FontFamily="Microsoft Sans Serif" FontSize="20" />
+        <Button x:Name="registerSubmitButton" Content="Kayıt Ol" HorizontalAlignment="Left" Margin="255,353,0,0" VerticalAlignment="Top" Height="40" Width="159" Background="#FF63289E" Foreground="White" Click="registerSubmitButton_Click"/>
 
     </Grid>
 </Window>

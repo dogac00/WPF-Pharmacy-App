@@ -22,7 +22,6 @@ namespace PharmacyApp
     {
         private PasswordService _passwordService;
         private UserService _userService;
-        private Window _windowToClose;
 
         public RegisterWindow(Window window)
         {
@@ -30,7 +29,6 @@ namespace PharmacyApp
 
             _passwordService = new PasswordService();
             _userService = ServiceProvider.GetUserService();
-            _windowToClose = window;
         }
 
         private async void registerSubmitButton_Click(object sender, RoutedEventArgs e)
@@ -42,7 +40,7 @@ namespace PharmacyApp
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password1) ||
                 string.IsNullOrEmpty(password2))
             {
-                MessageBox.Show("Tüm bilgiler zorunludur.");
+                MessageBox.Show("Tüm bilgileri zorunludur.");
 
                 return;
             }
@@ -56,7 +54,14 @@ namespace PharmacyApp
 
             if (username.Length < 5)
             {
-                MessageBox.Show("Kullanıcı adı en az 5 karakter içemelidir.");
+                MessageBox.Show("Kullanıcı adı en az 5 karakter içermelidir.");
+
+                return;
+            }
+
+            if (await _userService.IsUsernameTaken(username))
+            {
+                MessageBox.Show("Kullanici adı alınmış. Farklı bir kullanıcı adı deneyin.");
 
                 return;
             }
@@ -70,16 +75,11 @@ namespace PharmacyApp
 
             PharmacyUser user = new PharmacyUser { UserName = username, Password = hashedPassword };
 
-            await _userService.AddUser(user);
-
+            await _userService.AddUserAsync(user);
+            
             MessageBox.Show("Kayıt Başarılı.");
 
-            MainWindow window = new MainWindow(user);
-
-            window.Show();
-
             this.Close();
-            _windowToClose.Close();
         }
     }
 }

@@ -47,37 +47,39 @@ namespace PharmacyApp
         {
             var property = this.drugPropertiesBox.SelectedItem as string;
             var keyword = txtSearchBox.Text;
-            Drug toLook;
+            
+            Drug drug;
 
             switch (property)
             {
                 case "İsim":
-                    toLook = _service.FindDrug(_user, d => d.Name.Contains(keyword));
+                    drug = _service.FindDrug(_user, d => d.Name.Contains(keyword));
                     break;
                 case "Etken Madde":
-                    toLook = _service.FindDrug(_user, d => d.Ingredient.Contains(keyword));
+                    drug = _service.FindDrug(_user, d => d.Ingredient.Contains(keyword));
                     break;
                 case "Semptom":
-                    toLook = _service.FindDrug(_user, d => d.RelievedSymptom.Contains(keyword));
+                    drug = _service.FindDrug(_user, d => d.RelievedSymptom.Contains(keyword));
                     break;
                 case "Yan Etki":
-                    toLook = _service.FindDrug(_user, d => d.AdverseEffect.Contains(keyword));
+                    drug = _service.FindDrug(_user, d => d.AdverseEffect.Contains(keyword));
                     break;
                 default:
-                    throw new Exception();
+                    MessageBox.Show("Lütfen menüden geçerli bir değer seçiniz.");
+                    return;
             }
 
-            if (toLook == null)
+            if (drug == null)
             {
                 MessageBox.Show("Aradığınız ilaç bulunamadı.");
 
                 return;
             }
 
-            string drugDetails = $"İlaç Adı\t\t{ toLook.Name }\r\n" +
-                                 $"İlaç Etken Madde\t{ toLook.Ingredient }\r\n" +
-                                 $"İlaç Semptom\t{ toLook.RelievedSymptom }\r\n" +
-                                 $"İlaç Yan Etki\t{ toLook.AdverseEffect }\r\n";
+            string drugDetails = $"İlaç Adı\t\t{ drug.Name }\r\n" +
+                                 $"İlaç Etken Madde\t{ drug.Ingredient }\r\n" +
+                                 $"İlaç Semptom\t{ drug.RelievedSymptom }\r\n" +
+                                 $"İlaç Yan Etki\t{ drug.AdverseEffect }\r\n";
 
             MessageBox.Show(drugDetails);
         }
