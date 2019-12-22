@@ -50,7 +50,7 @@ namespace PharmacyApp
 
             if (user == null)
             {
-                MessageBox.Show("Böyle bir kullanıcı bulunamadı.");
+                MessageBox.Show("Giriş bilgileri hatalıdır. Lütfen bilgilerinizi kontrol edin.");
 
                 return;
             }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -48,41 +49,49 @@ namespace PharmacyApp
             var property = this.drugPropertiesBox.SelectedItem as string;
             var keyword = txtSearchBox.Text;
             
-            Drug drug;
+            List<Drug> drugs;
 
             switch (property)
             {
                 case "İsim":
-                    drug = _service.FindDrug(_user, d => d.Name.Contains(keyword));
+                    drugs = _service.FindDrugs(_user, d => d.Name.Contains(keyword));
                     break;
                 case "Etken Madde":
-                    drug = _service.FindDrug(_user, d => d.Ingredient.Contains(keyword));
+                    drugs = _service.FindDrugs(_user, d => d.Ingredient.Contains(keyword));
                     break;
                 case "Semptom":
-                    drug = _service.FindDrug(_user, d => d.RelievedSymptom.Contains(keyword));
+                    drugs = _service.FindDrugs(_user, d => d.RelievedSymptom.Contains(keyword));
                     break;
                 case "Yan Etki":
-                    drug = _service.FindDrug(_user, d => d.AdverseEffect.Contains(keyword));
+                    drugs = _service.FindDrugs(_user, d => d.AdverseEffect.Contains(keyword));
                     break;
                 default:
                     MessageBox.Show("Lütfen menüden geçerli bir değer seçiniz.");
                     return;
             }
 
-            if (drug == null)
+            if (!drugs.Any())
             {
                 MessageBox.Show("Aradığınız ilaç bulunamadı.");
 
                 return;
             }
 
-            string drugDetails = $"\t\tİlaç Bulundu\t\r\n" + 
-                                 $"\tİlaç Adı\t\t{drug.Name}\t\r\n" +
-                                 $"\tİlaç Etken Madde\t{drug.Ingredient}\t\r\n" +
-                                 $"\tİlaç Semptom\t{drug.RelievedSymptom}\t\r\n" +
-                                 $"\tİlaç Yan Etki\t{drug.AdverseEffect}\t\r\n";
+            StringBuilder drugDetails = new StringBuilder("\t\tBulunan İlaçlar\r\n");
 
-            MessageBox.Show(drugDetails);
+            foreach (Drug drug in drugs)
+            {
+                string currentDrug = $"\t\t Bulunan İlaç Detayı\t\r\n" + 
+                                     $"\tİlaç Adı\t\t{drug.Name}\t\r\n" +
+                                     $"\tİlaç Etken Madde\t{drug.Ingredient}\t\r\n" +
+                                     $"\tİlaç Semptom\t{drug.RelievedSymptom}\t\r\n" +
+                                     $"\tİlaç Yan Etki\t{drug.AdverseEffect}\t\r\n";
+
+                drugDetails.Append(currentDrug);
+            }
+
+
+            MessageBox.Show(drugDetails.ToString());
         }
     }
 }

@@ -42,13 +42,12 @@ namespace PharmacyApp.Services
                 .ToListAsync();
         }
 
-        public Drug FindDrug(PharmacyUser user, Func<Drug, bool> howToSearch)
+        public List<Drug> FindDrugs(PharmacyUser user, Func<Drug, bool> howToSearch)
         {
             return _context.Drugs
                 .Where(d => d.UserId == user.Id)
-                .AsEnumerable()
                 .Where(howToSearch)
-                .FirstOrDefault();
+                .ToList();
         }
     }
 }
